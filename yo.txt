@@ -1,0 +1,72 @@
+#include "myheader.h"
+
+void PrintHeader(string asName = "Parallel Arrays", int asNum = 10, char asType)
+{
+	cout << left;
+	cout << "***********************************************************\n";
+	cout << "*  PROGRAMMED BY : Chris Burrell\n";
+	cout << "*  "   << setw(14) << "STUDENT ID" << ": 1009369\n";
+	cout << "*  "   << setw(14) << "CLASS" << ": CS1A - MW - 8a - 12:00a\n";
+	cout << "*  ";
+	//PROCESSING - This will adjust setws and format appropriately based on if
+	//			   this is a lab 'L' or assignment
+	if(toupper(asType) == 'L')
+	{
+		cout << "LAB #" << setw(9);
+	}
+	else
+	{
+		cout << "ASSIGNMENT #" << setw(2);
+	}
+	cout << asNum << ": " << asName << endl;
+	cout << "*********************************************************\n\n";
+	cout << right;
+
+}
+
+
+
+
+
+===========================================
+
+
+#include "myheader.h"
+
+/******************************************************************************
+ * (Title and overall description of the project)
+ * ----------------------------------------------------------------------------
+ * This program will ...
+ * ----------------------------------------------------------------------------
+ * INPUT:
+ * 		<>
+ *
+ * OUTPUT:
+ * 		<>
+ *****************************************************************************/
+
+int main()
+{
+
+	/**************************************************************************
+	 * CONSTANTS
+	 * ------------------------------------------------------------------------
+	 * OUTPUT - USED FOR CLASS HEADING
+	 *-------------------------------------------------------------------------
+	 *PROGRAMMER[] : Programmer's Name
+	 *CLASS[]      : Student's Course
+	 *SECTION[]    : Class Days and Times
+	 *LAB_NUM      : Lab Number (specific to this Lab / Assignment)
+	 *LAB_NAME[]   : Title of the Lab / Assignment
+	 *************************************************************************/
+
+	// variables for class header
+	string asName;
+	int asNum;
+	char asType;
+	// information to be entered that will be output in class header
+	asName = "Parallel Arrays";
+	asNum = 10;
+	asType = 'A';
+	// Will output the class header
+	PrintHeader(asName, asNum, asType);
